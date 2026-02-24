@@ -175,15 +175,24 @@
     /* Comentarios */
     .openAnswerLabel{ font-size:11.5px; font-weight:700; margin: 8px 0 4px; }
     .openArea{
-      width:100%;
-      min-height:30mm;
-      resize:none;
-      border:1px solid #111;
-      padding:6px 8px;
-      font-size:11.5px;
-      outline:none;
-      background:#fff;
-    }
+   appearance: none;
+   -webkit-appearance: none;
+   width:100%;
+   height:60px;              /* ajustá si querés */
+   resize:none;
+
+   border:1px solid #111;
+   background:#fff;
+
+   padding:0 !important;     /* sin padding */
+   margin:0 !important;
+
+   font-size:11.5px;
+   line-height:1;            /* clave para que no “baje” */
+   box-sizing:border-box;
+   display:block;
+   }
+    
     .openArea:focus{ border:2px solid #0f2a44; }
 
     /* Bottom block */
@@ -389,8 +398,9 @@
         </table>
 
         <div class="openAnswerLabel">Comentarios, sugerencias o reclamos:</div>
-        <textarea class="openArea" name="cc_comentarios" placeholder=""></textarea>
-        <div class="openHint">(Respuesta abierta)</div>
+        <textarea class="openArea" name="cc_comentarios" maxlength="500"
+        placeholder="Máximo 500 caracteres"></textarea>
+        
       </div>
 
       <!-- === El resto de secciones (1,2,3,4,6,7) las dejé “listas” para que copies el mismo patrón === -->
@@ -449,11 +459,13 @@
         </table>
 
         <div class="openAnswerLabel">Comentarios, sugerencias o reclamos:</div>
-        <textarea class="openArea" name="ud_comentarios"></textarea>
-        <div class="openHint">(Respuesta abierta)</div>
+        <textarea class="openArea" name="cc_comentarios" maxlength="500"
+        placeholder="Máximo 500 caracteres"></textarea>
+        
       </div>
 
       <!-- placeholders (vacíos) para que el menú no falle -->
+      
       <div class="section" id="sec-3" data-title="Gestión de Backups">
       <div class="secTitle">3. Gestión de Backups</div>
       <div class="secDesc">Este proceso incluye la restauración de datos y gestión de copias de seguridad.</div>
@@ -505,9 +517,10 @@
           </tbody>
         </table>
 
-        <div class="openAnswerLabel">Comentarios, sugerencias o reclamos:</div>
-        <textarea class="openArea" name="ud_comentarios"></textarea>
-        <div class="openHint">(Respuesta abierta)</div>
+       <div class="openAnswerLabel">Comentarios, sugerencias o reclamos:</div>
+        <textarea class="openArea" name="cc_comentarios" maxlength="500"
+        placeholder="Máximo 500 caracteres"></textarea>
+        
       </div>
 
       <!-- placeholders (vacíos) para que el menú no falle -->
@@ -564,8 +577,9 @@
         </table>
 
         <div class="openAnswerLabel">Comentarios, sugerencias o reclamos:</div>
-        <textarea class="openArea" name="ud_comentarios"></textarea>
-        <div class="openHint">(Respuesta abierta)</div>
+        <textarea class="openArea" name="cc_comentarios" maxlength="500"
+        placeholder="Máximo 500 caracteres"></textarea>
+        
       </div>
 
 
@@ -625,8 +639,9 @@
         </table>
 
         <div class="openAnswerLabel">Comentarios, sugerencias o reclamos:</div>
-        <textarea class="openArea" name="ud_comentarios"></textarea>
-        <div class="openHint">(Respuesta abierta)</div>
+        <textarea class="openArea" name="cc_comentarios" maxlength="500"
+        placeholder="Máximo 500 caracteres"></textarea>
+        
      </div>
 
 
@@ -686,9 +701,10 @@
           </tbody>
         </table>
 
-        <div class="openAnswerLabel">Comentarios, sugerencias o reclamos:</div>
-        <textarea class="openArea" name="ud_comentarios"></textarea>
-        <div class="openHint">(Respuesta abierta)</div>
+       <div class="openAnswerLabel">Comentarios, sugerencias o reclamos:</div>
+        <textarea class="openArea" name="cc_comentarios" maxlength="500"
+        placeholder="Máximo 500 caracteres"></textarea>
+        
       
       </div>
       <div class="section" id="sec-7" data-title="Alta de Servidor">
@@ -743,71 +759,24 @@
         </table>
 
         <div class="openAnswerLabel">Comentarios, sugerencias o reclamos:</div>
-        <textarea class="openArea" name="ud_comentarios"></textarea>
-        <div class="openHint">(Respuesta abierta)</div>
+        <textarea class="openArea" name="cc_comentarios" maxlength="500"
+        placeholder="Máximo 500 caracteres"></textarea>
+        
       
       
       
       
       </div>
 
-      <div class="bottomBlock">
-        <div class="subHdr">Revisiones</div>
-        <table class="miniTable">
-          <thead>
-            <tr>
-              <th style="width:20%;">Versión</th>
-              <th style="width:25%;">Fecha</th>
-              <th>Modificación</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>0 (cero)</td>
-              <td>12.09.2025</td>
-              <td>Versión Inicial</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <div class="subHdr">Cuadro de aprobación</div>
-        <table class="miniTable">
-          <thead>
-            <tr>
-              <th style="width:22%;">&nbsp;</th>
-              <th>NOMBRE</th>
-              <th style="width:34%;">CARGO/ÁREA</th>
-              <th style="width:18%;">FECHA</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><b>REALIZACIÓN</b></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td><b>CONTROL</b></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td><b>APROBACIÓN</b></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+      
 
       <div class="footerNote">
         El presente Documento es de uso interno de la Dirección General de Activos Digitales, Tecnología e Informática
         – Gerencia Infraestructura – Ministerio de Seguridad
       </div>
     </section>
+    
+
   </div>
 
   <script>
@@ -835,13 +804,12 @@ cargarFechaAutomatica();
       function closeMenu(){ menu.classList.remove('open'); }
       function toggleMenu(){ menu.classList.toggle('open'); }
       function showSection(id){
-        sections.forEach(s => s.classList.toggle('active', s.id === id));
-        const sec = document.getElementById(id);
-        if(sec){
-          menuBtn.textContent = (sec.getAttribute('data-title') || 'Elegir ítem') + ' ▾';
-          sec.scrollIntoView({behavior:'smooth', block:'start'});
-        }
-      }
+  sections.forEach(s => s.classList.toggle('active', s.id === id));
+  const sec = document.getElementById(id);
+  if(sec){
+    menuBtn.textContent = (sec.getAttribute('data-title') || 'Elegir ítem') + ' ▾';
+  }
+}
 
       // Default: 1er ítem (cambiá a sec-5 si querés que arranque en Carpetas Compartidas)
       showSection('sec-1');

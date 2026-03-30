@@ -34,22 +34,47 @@
     }
 
     @media print{
-      body{ background:#fff; }
-      .wrap{ padding:0; gap:0; }
-      .sheet{
-        border:none;
-        box-shadow:none;
-        width:auto;
-        min-height:auto;
-        padding: var(--pad);
-        page-break-after: always;
-      }
-      .sheet:last-child{ page-break-after:auto; }
-      .no-print{ display:none !important; }
+  @page{
+    size: A4;
+    margin: 0;
+  }
 
-      /* Para que en PDF se vean “limpios” */
-      input, textarea, select{ -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-    }
+  html, body{
+    margin:0;
+    padding:0;
+    background:#fff;
+  }
+
+  .wrap{
+    padding:0;
+    gap:0;
+  }
+
+  .sheet{
+    width:210mm;
+    min-height:297mm;
+    margin:0;
+    border:none;
+    box-shadow:none;
+    padding:15mm 15mm 22mm 15mm;
+    position:relative;
+    overflow:hidden;
+    page-break-after:always;
+  }
+
+  .sheet:last-child{
+    page-break-after:auto;
+  }
+
+  .no-print{
+    display:none !important;
+  }
+
+  input, textarea, select{
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
 
     /* Header */
     .topHeader{
@@ -210,14 +235,14 @@
     .miniTable th{ background:#f3f3f3; font-weight:700; }
 
     
-    .footerNote {
-      position: absolute;
-      bottom: 10mm;
-      left: 15mm;
-      right: 15mm;
-      font-size: 10px;
-      text-align: center;
-      page-break-before: auto;
+    .footerNote{
+      position:absolute;
+      left:15mm;
+      right:15mm;
+      bottom:8mm;
+      font-size:10px;
+      line-height:1.2;
+      text-align:center;
     }
 
     /* Botón imprimir */
